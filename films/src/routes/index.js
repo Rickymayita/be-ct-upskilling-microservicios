@@ -1,10 +1,11 @@
 const { Router } = require('express')
 const contollers = require('../controllers')
+const middlewares = require('../middlewares')
 
 const router = Router();
 
 router.get('/', contollers.getFilms)
 
-router.post('/', contollers.createFilm)
+router.post('/', middlewares.filmValidation, contollers.createFilm)
 
 module.exports = router;

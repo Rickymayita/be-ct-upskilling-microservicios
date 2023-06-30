@@ -5,6 +5,6 @@ module.exports={
         return films
     },
     create: async () => {
-        throw Error('hay un error al momento de crear una pelicula')
+        throw Error('hay un error en la BDD momento de crear una pelicula')
     }
 }
